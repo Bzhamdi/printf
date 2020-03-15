@@ -17,5 +17,5 @@ int _printf(const char *format, ...);
 int print_c(va_list c);
 int print_s(va_list s);
 int _putchar(char c);
-int (*get_func(const char *format))(va_list)
+int (*get_func(const char *format))(va_list);
 #endif

@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 	va_start(lst, format);
 	while (format != NULL && format[i] != '\0')
 	{
-		while (format[i] != NULL && format[i] != '%' && format[i] != '\0')
+		while (format[i] && format[i] != '%' && format[i] != '\0')
 		{
 			_putchar(format[i]);
 			i++;
@@ -24,7 +24,7 @@ int _printf(const char *format, ...)
 		func = get_func(&format[i + 1]);
 		if (func != NULL)
 		{
-			len = len + func(valist);
+			len = len + func(lst);
 			i = i + 2;
 		}
 		else
@@ -38,7 +38,7 @@ int _printf(const char *format, ...)
 			else
 				i++;
 		}
-		if (format[i] == NULL)
+		if (!format[i])
 			return (len);
 	}
 	if (format == NULL)
