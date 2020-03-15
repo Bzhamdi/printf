@@ -5,14 +5,12 @@
  * @c:char.
  * Return:1
  */
-
 int print_c(va_list c)
 {
 	char str = (char)va_arg(c, int);
 	_putchar(str);
 	return (1);
 }
-
 /**
  * print_s - print (string)
  * @s: String.

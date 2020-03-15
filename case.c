@@ -6,7 +6,7 @@
 * Return: pointer to function
 *
 */
-static int (*get_func(const char *format))(va_list)
+int (*get_func(const char *format))(va_list)
 {
 	unsigned int i = 0;
 	printing p[] = {
