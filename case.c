@@ -15,6 +15,10 @@ int (*get_func(const char *format))(va_list)
 		{"i", print_i},
 		{"d", print_i},
 		{"b", print_b},
+		{"u", print_u},
+		{"x", print_x},
+		{"X", print_x_upper},
+		{"o", print_o},
 		{NULL, NULL}
 	};
 	int i;

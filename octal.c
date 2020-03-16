@@ -1,3 +1,5 @@
+#include "holberton.h"
+#include <stdlib.h>
 /**
  * print_o - print an unsigned int in octal.
  * @o: unsigned int
@@ -19,7 +21,7 @@ num  = num / 8;
 count = 0;
 for (j = i - 1; j > 0; j--)
 {
-putchar('0' + octalNumber[j]);
+_putchar('0' + octalNumber[j]);
 count++;
 }
 return (count);
