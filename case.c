@@ -9,20 +9,18 @@
 */
 int (*get_func(const char *format))(va_list)
 {
-      
 	printing p[] = {
 		{"c", print_c},
 		{"s", print_s},
 		{NULL, NULL}
-			};
-	int i;	
-for (i = 0; p[i].str != NULL; i++)
+	};
+	int i;
+
+	for (i = 0; p[i].str != NULL; i++)
 	{
 		if (*(p[i].str) == *format)
-	{
-		break;
+			break;
 	}
-}
 	return (p[i].fn);
 
 }

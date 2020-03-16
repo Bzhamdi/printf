@@ -8,6 +8,7 @@
 int print_c(va_list c)
 {
 	char str = (char)va_arg(c, int);
+
 	_putchar(str);
 	return (1);
 }
@@ -20,6 +21,7 @@ int print_s(va_list s)
 {
 	char *str = va_arg(s, char *);
 	int i = 0;
+
 	if (str == NULL)
 		str = "(null)";
 	for (; str[i]; i++)
