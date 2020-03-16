@@ -12,6 +12,8 @@ int (*get_func(const char *format))(va_list)
 	printing p[] = {
 		{"c", print_c},
 		{"s", print_s},
+		{"i", print_i},
+		{"d", print_i},
 		{NULL, NULL}
 	};
 	int i;
