@@ -15,12 +15,14 @@ int _printf(const char *format, ...)
 	va_start(lst, format);
 	while (format != NULL && format[i] != '\0')
 	{
-		while (format[i] && format[i] != '%' && format[i] != '\0')
+		while (format[i] && format[i] != '%')
 		{
 			_putchar(format[i]);
 			i++;
 			len++;
 		}
+		if (!format[i])
+			return (len);
 		func = get_func(&format[i + 1]);
 		if (func != NULL)
 		{
@@ -38,8 +40,6 @@ int _printf(const char *format, ...)
 			else
 				i++;
 		}
-		if (!format[i])
-			return (len);
 	}
 	if (format == NULL)
 		return (-1);
