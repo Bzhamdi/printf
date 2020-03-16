@@ -32,33 +32,27 @@ int print_u(va_list u)
 */
 int print_x(va_list x)
 {
-	unsigned int a[8];
-	unsigned int nb,i, num = 0, sum = 0;
-	char diff;
-	int len = 0;
+        unsigned int nb, quotient, remainder, len = 0;
+        int i, j = 0;
+        char hexadecimalnum[100];
 
-	num = 268435456;
-	nb = va_arg(x, unsigned int);
-	diff = 'a' - ':';
-	a[0] = nb / num;
-	for (i = 1; i < 8; i++)
-	{
-		num = num / 16;
-		a[i] = (nb / num) % 16;
-	}
-	for (i = 0; i < 8; i++)
-	{
-		sum = sum + a[i];
-		if (sum || i == 7)
-		{
-			if (a[i] < 10)
-				_putchar('0' + a[i]);
-			else
-				_putchar('0' + diff + a[i]);
-			len++;
-		}
-	}
-	return (len);
+        nb = va_arg(x, unsigned int);
+        quotient = nb;
+        while (quotient != 0)
+        {
+                remainder = quotient % 16;
+                if (remainder < 10)
+                        hexadecimalnum[j++] = 48 + remainder;
+                else
+                        hexadecimalnum[j++] = 87 + remainder;
+                        quotient = quotient / 16;
+        }
+        for (i = j - 1; i >= 0; i--)
+        {
+                _putchar(hexadecimalnum[i]);
+                len++;
+        }
+        return (len);
 }
 /**
  * print_x_upper - print on hexa form
@@ -67,31 +61,25 @@ int print_x(va_list x)
 */
 int print_x_upper(va_list x)
 {
-        unsigned int a[8];
-        unsigned int nb,i, num = 0, sum = 0;
-        char diff;
-        int len = 0;
+	unsigned int nb, quotient, remainder, len = 0;
+	int i, j = 0;
+	char hexadecimalnum[100];
 
-        num = 268435456;
-        nb = va_arg(x, unsigned int);
-        diff = 'A' - ':';
-        a[0] = nb / num;
-        for (i = 1; i < 8; i++)
-        {
-                num = num / 16;
-                a[i] = (nb / num) % 16;
-        }
-        for (i = 0; i < 8; i++)
-        {
-                sum = sum + a[i];
-                if (sum || i == 7)
-                {
-                        if (a[i] < 10)
-                                _putchar('0' + a[i]);
-                        else
-                                _putchar('0' + diff + a[i]);
-                        len++;
-                }
-        }
-        return (len);
+	nb = va_arg(x, unsigned int);
+	quotient = nb;
+	while (quotient != 0)
+	{
+		remainder = quotient % 16;
+		if (remainder < 10)
+			hexadecimalnum[j++] = 48 + remainder;
+		else
+			hexadecimalnum[j++] = 55 + remainder;
+			quotient = quotient / 16;
+	}
+	for (i = j - 1; i >= 0; i--)
+	{
+		_putchar(hexadecimalnum[i]);
+		len++;
+	}
+	return (len);
 }
