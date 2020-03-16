@@ -1,9 +1,12 @@
 #include "holberton.h"
+#include <stdlib.h>
 /**
  * print_b - unsigned int argument is converted to binary
  * @b: unsigned int to binary
  * Return: int length
  */
+int print_b(va_list b)
+{
 	unsigned int nb, max, i, sum = 0;
 	unsigned int a[32];
 	int len = 0;
