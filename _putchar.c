@@ -9,5 +9,8 @@
  */
 int _putchar(char c)
 {
+	#define BUFSIZE 1024
+	char buf[BUFSIZE];
+
 	return (write(1, &c, 1));
 }
