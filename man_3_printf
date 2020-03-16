@@ -1,0 +1,52 @@
+PRINTF(3)                            Holberton School Students Programmer's Manual                            PRINTF(3)
+
+NAME
+	_printf
+
+SYNOPSIS
+	#include <stdio.h>
+
+       	int printf(const char *format, ...);
+
+
+	#include <stdarg.h>
+
+       	int vprintf(const char *format, va_list ap);
+
+
+	#include "holberton.h"
+
+	int _printf(const char *format, ...);
+	int print_c(va_list c);
+	int print_s(va_list s);
+	int _putchar(char c);
+	int (*get_func(const char *format))(va_list);
+
+DESCRIPTION
+
+	The _printf function (the name comes from print formatted) prints a string on the screen using a format string
+ 	that includes the instructions to mix several strings and produce the final string to be printed on the screen.
+
+	Print the FORMAT in string, after interpreting the directives with '%'.
+
+EXAMPLES
+
+	_printf("Character:[%c]\n", 'H');
+	Character:[H]
+
+	_printf("String:[%s]\n", "I am a string !");
+	String:[I am a string !]
+
+ 	len = _printf("Let's try to printf a simple sentence.\n");
+	_printf("Length:[%d, %i]\n", len, len);
+	Length:[39, 39]
+
+SEE ALSO
+
+	%c : Prints the ASCII character passed as parameter.
+	%d, %i : Prints Integer signed decimal conversion.
+	%s : Prints Text string (finished with '\0').
+
+AUTHOR
+	
+	Written by Hamdi Bouzouitina, Taha Elleuch..
