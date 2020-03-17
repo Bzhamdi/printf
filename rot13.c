@@ -15,6 +15,11 @@ char *str;
 		str = "(ahyy)";
 	for (i = 0; str[i]; i++)
 	{
+		if (!a[j])
+                {
+                        _putchar(str[i]);
+                        nb++;
+                }
 		for (j = 0; a[j]; j++)
 		{
 			if (a[j] == str[i])
