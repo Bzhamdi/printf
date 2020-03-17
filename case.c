@@ -19,6 +19,7 @@ int (*get_func(const char *format))(va_list)
 		{"x", print_x},
 		{"X", print_x_upper},
 		{"o", print_o},
+		{"S",print_o},
 		{NULL, NULL}
 	};
 	int i;
