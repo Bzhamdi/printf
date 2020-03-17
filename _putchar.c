@@ -9,7 +9,5 @@
  */
 int _putchar(char c)
 {
-	char buf[1024];
-
 	return (write(1, &c, 1));
 }
