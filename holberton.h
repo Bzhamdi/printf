@@ -23,6 +23,7 @@ int print_x(va_list x);
 int print_x_upper(va_list x);
 int print_S(va_list x);
 int print_o(va_list o);
+int print_R(va_list R);
 int _putchar(char c);
 int (*get_func(const char *format))(va_list);
 #endif
