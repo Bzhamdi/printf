@@ -44,10 +44,8 @@ int print_x(va_list x)
 		if (remainder < 10)
 			hexadecimalnum[j++] = 48 + remainder;
 		else
-		{
 			hexadecimalnum[j++] = 87 + remainder;
-			quotient = quotient / 16;
-		}
+		quotient = quotient / 16;
 	}
 	for (i = j - 1; i >= 0; i--)
 	{
@@ -75,10 +73,8 @@ int print_x_upper(va_list x)
 		if (remainder < 10)
 			hexadecimalnum[j++] = 48 + remainder;
 		else
-		{
 			hexadecimalnum[j++] = 55 + remainder;
-			quotient = quotient / 16;
-		}
+		quotient = quotient / 16;
 	}
 	for (i = j - 1; i >= 0; i--)
 	{
