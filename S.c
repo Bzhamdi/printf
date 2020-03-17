@@ -1,3 +1,10 @@
+#include "holberton.h"
+#include <stdlib.h>
+/**
+ * print_S - prints the string.
+ * @S: unsigned int
+ * Return: length printed
+ */
 int print_S(va_list S)
 {
 int nb = 0;
@@ -13,8 +20,8 @@ str = "(null)";
                         _putchar('\\');
                         _putchar('x');
                         nb += 2;
-                        nb += print_x_upper(str[i]);
-                }
+/**                        nb += print_x_upper(str[i]);
+   */             }
                 else
                 {
                         _putchar(str[i]);
