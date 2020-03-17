@@ -26,9 +26,9 @@ int print_x_upp(unsigned int x)
                 if (sum || i == 7)
                 {
                         if (a[i] < 10)
-                                putchar('0' + a[i]);
+                                _putchar('0' + a[i]);
                         else
-                                putchar('0' + diff + a[i]);
+                                _putchar('0' + diff + a[i]);
                         len++;
                 }
         }
