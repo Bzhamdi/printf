@@ -40,7 +40,7 @@ int _printf(const char *format, ...)
 				len++;
 			}
 			else
-				i++;
+				i = i + 2;
 		}
 	}
 	if (format == NULL)
