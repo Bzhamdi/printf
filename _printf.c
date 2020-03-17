@@ -29,8 +29,7 @@ int _printf(const char *format, ...)
 			len = len + func(lst);
 			i = i + 2;
 		}
-		else
-		{
+		else {
 			if (!format[i + 1])
 				return (-1);
 			if (format[i + 1] == '%')
